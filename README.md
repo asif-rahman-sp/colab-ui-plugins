@@ -25,7 +25,7 @@
 
 | Skills | Description |
 |---|---|
-| [UI Plugin Agent Skills](skills) | Skills that teach an AI coding assistant to build, deploy, and verify UI plugins, and to find the ISC APIs and scopes a plugin needs. Drop them into `.claude/skills/` or read them as Markdown. |
+| [UI Plugin Agent Skills](skills) | Skills that teach an AI coding assistant to build, deploy, and verify UI plugins, find the ISC APIs and scopes a plugin needs, and move existing plugins to the SDK's built-in theme sync. Drop them into `.claude/skills/` or read them as Markdown. |
 
 <!-- CONTRIBUTING -->
 ## Contributing

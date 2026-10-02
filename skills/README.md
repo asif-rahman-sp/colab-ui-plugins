@@ -8,6 +8,7 @@ Agent skills that teach an AI coding assistant how to build, ship, and check a S
 | [deploying-ui-plugins](deploying-ui-plugins/SKILL.md) | Create, upload, share, and troubleshoot a plugin with `sail ui-plugins`. |
 | [verifying-ui-plugins](verifying-ui-plugins/SKILL.md) | Check a plugin with unit tests, a production build, and a pass in a real tenant. |
 | [finding-isc-apis](finding-isc-apis/SKILL.md) | Find the right ISC API, its schemas, and its scopes before writing the call. |
+| [adopting-theme-sync](adopting-theme-sync/SKILL.md) | Update an existing plugin to the SDK's built-in light and dark theme sync, and fix plugins that look wrong in one mode. |
 
 Each skill is a folder with a `SKILL.md`. The `description` in its frontmatter tells the agent when to load it. Keep each folder whole: `building-ui-plugins` reads `references/isc-endpoints.md`.
 
@@ -17,7 +18,7 @@ Claude Code and Cursor load skills from `.claude/skills/` in your project. Copy 
 
 ```bash
 mkdir -p .claude/skills
-for skill in building-ui-plugins deploying-ui-plugins verifying-ui-plugins finding-isc-apis; do
+for skill in building-ui-plugins deploying-ui-plugins verifying-ui-plugins finding-isc-apis adopting-theme-sync; do
   cp -R "path/to/colab-ui-plugins/skills/$skill" .claude/skills/
 done
 ```

@@ -50,7 +50,7 @@ Use hash routing (the Angular starter does). Once the handshake is ready, report
 
 ## Theming
 
-- To follow the ISC theme, read `matchMedia('(prefers-color-scheme: dark)')` and listen for `change`. Inside the iframe, Chrome reports that query from the `color-scheme` the iframe inherits from ISC. Today ISC sets `color-scheme: dark` in dark mode but leaves light mode unset, so a light ISC falls back to the user's operating system setting. Theme sync is planned to move into the SDK; once it does, drop the hand-written listener.
+- To follow the ISC theme, read `matchMedia('(prefers-color-scheme: dark)')` and listen for `change`. Inside the iframe, Chrome reports that query from the `color-scheme` the iframe inherits from ISC. If the host leaves `color-scheme` unset in light mode, the query falls back to the user's operating system setting. Where `@sailpoint/ui-plugin-sdk` provides theme sync, use it instead of a hand-written listener.
 - Angular starter: it ships the SailPoint Design System PrimeNG preset. Use the preset's semantic variables: `--spds-content-background`, `--spds-content-hover-background`, `--spds-content-border-color`, `--spds-text-color`, `--spds-text-muted-color`, `--spds-primary-color`, `--spds-highlight-background`. Dark mode is the `.spds-dark` class on the iframe's `<html>`, toggled from the query above. In the dark scheme, `--spds-surface-50` and `--spds-surface-100` are light colors, so don't use them as backgrounds.
 
 ## Sparse tenants
